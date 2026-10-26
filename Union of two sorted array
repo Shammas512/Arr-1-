@@ -1,0 +1,16 @@
+
+        while(i<n1){
+            if(arr[i]!= newArr.back()){
+                newArr.push_back(arr[i]);
+               
+            }
+             i++;
+        }
+
+        while(j<n2){
+            if(arr2[j]!= newArr.back()){
+                newArr.push_back(arr2[j]);
+                
+            }
+            j++;
+        }
