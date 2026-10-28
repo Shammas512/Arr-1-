@@ -1,0 +1,18 @@
+#include<iostream>
+#include<map>
+#include <vector>
+using namespace std;
+
+int main(){
+    map <int,int> mpp;
+    int target = 9;
+    vector<int> arr = {2,7,9,11};
+    for(int i =0 ; i<arr.size();i++){
+        int k = arr[i];
+        int mn = target-k;
+        if(mpp.find(mn) !=mpp.end()){
+            cout << mpp[mn] << i;
+        }
+        mpp[k] = i;
+    }
+}
