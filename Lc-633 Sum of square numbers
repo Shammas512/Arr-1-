@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool judgeSquareSum(int c) {
+      long long right = sqrt(c);
+      int left = 0;
+      while(left<=right){
+      long long check = 1LL * left * left + 1LL * right * right;
+        if(check<c){
+            left++;
+        }
+        else if(check>c){
+            right --;
+        }
+        else{
+            return true;
+        }
+      }
+      return false;
+    }
+};
