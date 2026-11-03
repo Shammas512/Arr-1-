@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        int postives = 0;
+        int negatives = 1;
+        int n = nums.size();
+        vector<int> modified(n);
+        for(int i = 0; i<n;i++){
+            if(nums[i]<0){
+                modified[negatives] =  nums[i];
+                negatives +=2;
+            }
+            else {
+                modified[postives] = nums[i];
+                postives +=2;
+            }
+        }
+
+        return modified;
+    }
+};
